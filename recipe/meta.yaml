@@ -1,5 +1,5 @@
 {% set name = "aioboto3" %}
-{% set version = "9.6.0" %}
+{% set version = "10.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: abac5dcfa871627b7040e6586a69e3359e2dfc4e15dc66135969f2d26fbdcb3b
+  sha256: 212cd30334e203cadc6389c526478cc6eaba266589637f5df2133c76f97b8544
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - poetry-dynamic-versioning
   run:
     - python >=3.8
-    - aiobotocore ==2.3.0
+    - aiobotocore ==2.4.0
     - boto3 >=1.21.21
     - cryptography >=37.0.0
     - idna >=3.3.0
