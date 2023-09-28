@@ -38,7 +38,6 @@ about:
   summary: 'Wrapper to use boto3 resources with the aiobotocore async backend'
   description: |
     aiobotocore allows you to use near enough all of the boto3 client commands in an async manner just by prefixing the command with await.
-  home: https://github.com/terrycain/aioboto3
   license: Apache-2.0
   license_file: LICENSE
   license_family: Apache
