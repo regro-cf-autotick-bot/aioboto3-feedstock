@@ -1,5 +1,5 @@
 {% set name = "aioboto3" %}
-{% set version = "10.1.0" %}
+{% set version = "11.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 212cd30334e203cadc6389c526478cc6eaba266589637f5df2133c76f97b8544
+  sha256: 1b3dd626c98599ee34ff29581c2da119bc408e562be7a61c627ae53fa106eb68
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
   script: rm -f poetry.lock && {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - poetry
