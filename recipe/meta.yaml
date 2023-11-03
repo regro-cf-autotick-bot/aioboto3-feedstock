@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: rm -f poetry.lock && {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - poetry-dynamic-versioning
   run:
     - python >=3.8
-    - aiobotocore ==2.4.0
+    - aiobotocore ==2.7.0
     - boto3 >=1.21.21
     - cryptography >=37.0.0
     - idna >=3.3.0
