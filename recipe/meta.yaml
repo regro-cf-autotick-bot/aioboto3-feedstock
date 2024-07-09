@@ -46,6 +46,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - peterbygrave
     - dgasmith
     - skrsna
     - markllama
