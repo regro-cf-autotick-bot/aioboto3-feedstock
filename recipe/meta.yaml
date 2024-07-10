@@ -22,7 +22,7 @@ requirements:
     - poetry-dynamic-versioning
   run:
     - python >=3.8
-    - aiobotocore >=2.7.0,<=2.12.3
+    - aiobotocore ==2.13.1
     - boto3 >=1.21.21
     - cryptography >=37.0.0
     - idna >=3.3.0
