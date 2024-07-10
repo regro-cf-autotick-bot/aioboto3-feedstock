@@ -152,5 +152,6 @@ Feedstock Maintainers
 
 * [@dgasmith](https://github.com/dgasmith/)
 * [@markllama](https://github.com/markllama/)
+* [@peterbygrave](https://github.com/peterbygrave/)
 * [@skrsna](https://github.com/skrsna/)
 
