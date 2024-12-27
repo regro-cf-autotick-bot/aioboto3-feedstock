@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 92c3232e0bf7dcb5d921cd1eb8c5e0b856c3985f7c1cd32ab3cd51adc5c9b5da
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: rm -f poetry.lock && {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - poetry
     - poetry-dynamic-versioning
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - aiobotocore ==2.13.1
     - aiofiles >=23.2.1
     - boto3 >=1.21.21
@@ -30,6 +30,8 @@ requirements:
 
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - aioboto3
     - aioboto3.s3
