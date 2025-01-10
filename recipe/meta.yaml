@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: rm -f poetry.lock && {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - poetry-dynamic-versioning
   run:
     - python >={{ python_min }}
-    - aiobotocore ==2.13.1
+    - aiobotocore ==2.16.1
     - aiofiles >=23.2.1
     - boto3 >=1.21.21
     - cryptography >=37.0.0
