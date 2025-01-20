@@ -22,7 +22,7 @@ requirements:
     - poetry-dynamic-versioning
   run:
     - python >={{ python_min }}
-    - aiobotocore ==2.16.1
+    - aiobotocore ==2.18.0
     - aiofiles >=23.2.1
     - boto3 >=1.21.21
     - cryptography >=37.0.0
