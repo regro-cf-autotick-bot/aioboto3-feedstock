@@ -1,5 +1,5 @@
 {% set name = "aioboto3" %}
-{% set version = "13.3.0" %}
+{% set version = "13.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 74c2ee3018dcf5714b92bbbe4ce6b78b6dde1e1804de42c784555e40634f8872
+  sha256: 3105f9e5618c686c90050e60eb5ebf9e28f7f8c4e0fa162d4481aaa402008aab
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: rm -f poetry.lock && {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - poetry-dynamic-versioning
   run:
     - python >={{ python_min }}
-    - aiobotocore ==2.16.1
+    - aiobotocore ==2.18.0
     - aiofiles >=23.2.1
     - boto3 >=1.21.21
     - cryptography >=37.0.0
