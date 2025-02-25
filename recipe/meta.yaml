@@ -12,14 +12,14 @@ source:
 build:
   noarch: python
   number: 0
-  script: rm -f poetry.lock && {{ PYTHON }} -m pip install --no-deps .
+  script: {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
-    - poetry
-    - poetry-dynamic-versioning
+    - setuptools >=68.2.0
+    - setuptools-scm >=8.0.0
   run:
     - python >={{ python_min }}
     - aiobotocore ==2.20.0
